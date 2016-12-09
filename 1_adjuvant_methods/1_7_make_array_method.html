@@ -24,6 +24,14 @@
 
 <script>
 
+    $(document).ready(function() {
+        var listItems = $('li');
+        var itemsArr = $.makeArray(listItems);
+        itemsArr.reverse();
+        $(itemsArr).appendTo('#list');
+        alert(itemsArr.length);
+    });
+
 </script>
 
 </body>
