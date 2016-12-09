@@ -21,6 +21,16 @@
 
 <script>
 
+	$(document).ready(function() {
+		
+		var n = [10,20,30,40];
+		var output = $.map(n, function(item, index) {
+			return item * 2;
+		});
+		alert(output);
+
+	});
+
 </script>
 
 </body>
