@@ -23,21 +23,13 @@
 
 	$(document).ready(function() {
 	
-		var obj1 = {
-			'name' : 'jQuery course'
+		var x = {
+			'showName' : function(name) {
+				alert(name);
+			}
 		};
-		var obj2 = {
-			'price' : 60
-		};
-		var obj3 = {
-			'category' : 'internet',
-			'name' : 'changedName'
-		};
-		var output = $.extend(obj1, obj2, obj3);
-		alert(JSON.stringify(output));
-		alert(obj1.name);
-		alert(obj1.price);
-
+		$.extend(x);	
+		$.showName('jQuery course');
 	});
 
 </script>
