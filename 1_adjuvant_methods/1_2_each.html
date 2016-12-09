@@ -23,6 +23,28 @@
 
 <script>
 
+	$(document).ready(function() {
+		// var numbers = [10,20,30,40,50];
+		// $.each(numbers, function(index, value) {
+		// 	alert("Index: " + index + " " + "Value:" + value);
+		// });
+	
+		var obj = {
+			'name' : 'jQuery course',
+			'price' : 60,
+			'category' : 'internet'
+		};
+
+		var list = $('#list');
+		var li = "";
+
+		$.each(obj, function(kye, value) {
+			 li += "<li>" + value + "</li>";
+		});
+
+		list.append(li);
+	});
+
 </script>
 
 </body>
