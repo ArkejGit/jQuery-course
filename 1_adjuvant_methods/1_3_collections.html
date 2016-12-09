@@ -22,12 +22,10 @@
 <script>
 
 $(document).ready(function() {
-	
-	var n1 = [1,2,3,4,5];
-	var n2 = [6,7,8,9,10];
-	var output = $.merge(n1, n2);
-
-	alert(output);
+		
+	var n = ['jQuery', 'JS', 'php', 'mySQL'];
+	alert($.inArray('jQuery', n)); // gives 0
+	alert($.inArray('jquery', n)); // gives -1
 
 });
 
