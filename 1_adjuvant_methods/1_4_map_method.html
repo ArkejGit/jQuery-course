@@ -23,9 +23,9 @@
 
 	$(document).ready(function() {
 		
-		var n = [10,20,30,40];
+		var n = ['a','r','k','e','j'];
 		var output = $.map(n, function(item, index) {
-			return item * 2;
+			return item.toUpperCase() + '*';
 		});
 		alert(output);
 
