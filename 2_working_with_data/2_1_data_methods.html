@@ -18,7 +18,12 @@
 
 <script>
 
-
+$(document).ready(function() {
+	$('body').data('name', 'kurs jQuery');
+	$('body').data('id', 343297);
+	$('body').data('numbers', [10,20,30,40,50]);
+	$('#wrapper').text($('body').data('numbers'));
+});
 
 </script>
 
