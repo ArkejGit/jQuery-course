@@ -18,6 +18,29 @@
 
 <script>
 
+$(document).ready(function() {
+	
+	var products = ['kurs js','kurs php','kurs jquery','kurs mysql','kurs joomla'];
+
+	var ul = $('<ul></ul>');
+
+	var items = [];
+
+	// $.each(products, function(index, val) {
+	// 	$('<li></li>').text(val).appendTo(ul);
+	// });
+
+	$.each(products, function(index, val) {
+		items.push('<li>' + val + '</li>');
+	});
+
+	ul.html(items.join(''));
+
+	$('#wrapper').append(ul);
+});
+	
+
+
 </script>
 
 </body>
