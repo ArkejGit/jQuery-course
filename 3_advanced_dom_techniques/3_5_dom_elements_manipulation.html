@@ -18,6 +18,22 @@
 
 <script>
 
+$(document).ready(function() {
+
+	//var art = $('#art').remove();
+	var art = $('#art').detach();
+
+	alert(art.attr('id'));
+
+	art.css('font-size', 18);
+
+	art.appendTo('#wrapper');
+});
+
+$(art).click(function() {
+	$(this).toggleClass('alert alert-info');
+});
+
 </script>
 
 </body>
