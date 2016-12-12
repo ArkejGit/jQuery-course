@@ -18,6 +18,21 @@
 
 <script>
 
+$(document).ready(function() {
+	
+	// var html = "<a href='http://arkej.pl' id='link' class='btn'>ARKEJ</a>";
+	// $('#wrapper').append(html);
+
+	var html = $('<a></a>', {
+		href: 'http://arkej.pl',
+		id: 'link',
+		'class': 'btn',
+		title: 'ARKEJ',
+		text: 'ARKEJ'
+	});
+	$('#wrapper').append(html);
+});
+
 </script>
 
 </body>
