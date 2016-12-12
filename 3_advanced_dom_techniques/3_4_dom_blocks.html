@@ -18,6 +18,15 @@
 
 <script>
 
+	$(document).ready(function() {
+		var f = document.createDocumentFragment();
+
+		f.appendChild(document.createElement('div'));
+		f.appendChild(document.createElement('div'));
+		f.appendChild(document.createElement('div'));
+		
+		$('#wrapper').append(f);
+	});
 
 </script>
 
