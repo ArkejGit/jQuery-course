@@ -18,6 +18,24 @@
 
 <script>
 
+$('#bt').click(function() {
+	$.ajax({
+		url: 'file.txt',
+		dataType: 'text'
+	})
+	.done(function(s) {
+		console.log("success");
+		console.log(s);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+	
+});
+
 </script>
 
 </body>
