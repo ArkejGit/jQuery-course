@@ -1,1 +1,1 @@
-<?php echo 'Przykladowe dane z pliku PHP'; ?>
+<?php echo 'sample data from PHP file'; ?>

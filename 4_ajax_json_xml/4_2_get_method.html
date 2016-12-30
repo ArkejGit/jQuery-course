@@ -21,6 +21,14 @@
 
 <script>
 
+	$('#bt').click(function() {
+		$.get('sample_data.php', function(data) {
+			$('#content').text(data);
+		});
+		// $.get('get_data.php', {name: 'jQuery course'}, function(data) {
+		// 	$('#content').text(data);
+		// });
+	});
 
 </script>
 
