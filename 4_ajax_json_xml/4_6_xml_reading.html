@@ -26,6 +26,28 @@
 
 $('#bt').click(function(){
 	
+	$.ajax({
+		url: 'products.xml',
+		dataType: 'xml',
+	})
+	.done(function(xml) {
+		var ul = $('<ul>');
+		var links = '';
+		$(xml).find('product').each(function() {
+			var name = $(this).find('name').text();
+			var link = $(this).find('link').text();
+			links += '<li><a href="' + link + '">' + name + '</a></li>';
+		});
+		ul.html(links);
+		$('#content').append(ul);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+	
 
 });
 	
