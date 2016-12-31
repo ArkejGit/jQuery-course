@@ -21,6 +21,14 @@
 
 $(document).ready(function() {
     
+    var xml = '<product><name>jQuery course</name><price>60</price></product>';
+    xmlDocument = $.parseXML(xml);
+    $xml = $(xmlDocument);
+    $name = $xml.find('name');
+    $('#name').append($name.text());
+    $price = $xml.find('price');
+    $('#price').append($price.text());
+
 });
 	
 </script>
