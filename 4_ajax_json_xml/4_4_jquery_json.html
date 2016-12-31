@@ -23,6 +23,16 @@
 
 $('#bt').click(function(){
 
+	$.getJSON('data.json', function(data) {
+		var products = data.products;
+		var ul = $('<ul>');
+		var items = '';
+		$.each(products, function(index, val) {
+			items += '<li>' + val.name + '</li>';
+		});
+		ul.html(items);
+		$('#content').append(ul);
+	});
 	
 });
 	
