@@ -16,6 +16,24 @@
 
 <script>
 
+	var btn = $('<input>', {
+		type: 'button',
+		value: 'Button',
+		class: 'btn btn-primary'
+	});
+
+	function newButton() {
+		$('#wrapper').append(btn);
+		$('#wrapper').trigger('createButton');
+	}
+
+	$('#wrapper').on('createButton', function(e) {
+		alert(e.type + ' ' + e.target);
+	});
+
+	$(document).ready(function() {
+		newButton();
+	});
 	
 </script>
 
