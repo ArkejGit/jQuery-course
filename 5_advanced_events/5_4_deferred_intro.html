@@ -16,6 +16,31 @@
 
 <script>
 
+	var time = null;
+	var rTime = null; 
+	var def = $.Deferred();
+
+	def.done(function() {
+		alert('remaining time ' + rTime + 's');
+	});		
+
+	def.fail(function() {
+		alert('end of time');
+	});
+
+	setTimeout(function() {
+		def.reject();
+	}, 5000);
+
+	$(document).click(function() {
+		rTime = -($.now() - time)/1000;
+		def.resolve();
+	});
+
+	$(document).ready(function() {
+		time = $.now() + 5000;
+	});
+
 </script>
 
 </body>
