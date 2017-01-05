@@ -15,30 +15,6 @@
 </div>
 
 <script>
-var time = null;
-var rTime = null;
-var def = $.Deferred();
-
-def.done(function(){
-	alert("Pozostało: " + rTime + "S");
-});
-
-def.fail(function(){
-	alert('Koniec czasu');
-});
-
-setTimeout(function(){
-	def.reject();
-},5000);
-
-$(document).click(function(){
-	rTime = -($.now() - time)/1000;
-	def.resolve();
-});
-
-$(document).ready(function() {
-    time = $.now() + 5000;
-});
 
 </script>
 
