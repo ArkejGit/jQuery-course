@@ -23,7 +23,20 @@
 
 <script>
 
+    // $('#bt').on('click', function() {
+    //     alert('click event');
+    // });
 
+    // $(document).ready(function() {
+    //     $('#bt').trigger('click');
+    // });
+
+    $(document).ready(function() {
+        $('#fr').on('submit', function(event) {
+            event.preventDefault();
+            $('#name').trigger('select');
+        });
+    });
 	
 </script>
 
