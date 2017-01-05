@@ -23,6 +23,23 @@
 
 <script>
 
+	// $('#bt').click(function() {
+	// 	alert('click');
+	// });
+
+	$('#bt').on('click', {name: 'click'},function(e) {
+		alert(e.data.name);
+	});
+
+	$('#sk').on('click', function(event) {
+		event.preventDefault();
+	});
+
+	$('#par').on('mouseenter', function() {
+		$(this).addClass('alert alert-info');
+	}).on('mouseleave', function() {
+		$(this).removeClass('alert alert-info');
+	});
 	
 </script>
 
