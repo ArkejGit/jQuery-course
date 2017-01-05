@@ -16,24 +16,6 @@
 
 <script>
 
-var btn = $("<input>",{
-	type: 'button',
-	value: 'Przycisk',
-	class: "btn btn-primary"
-	});
-
-$(document).ready(function(){
-    newButton();
-});
-	
-function newButton(){
-	$('#wrapper').append(btn);
-	$('#wrapper').trigger("createButton");
-};
-
-$('#wrapper').on('createButton',function(e){
-	alert(e.type + " " + e.target);
-});
 	
 </script>
 
