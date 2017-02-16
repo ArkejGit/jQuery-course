@@ -18,7 +18,46 @@
 
 <script>
 
+$(document).ready(function() {
+var titleReq =	$.ajax({
+		url: 'title.php',
+		dataType: 'text',
+		type: 'GET',
+	})
+	.done(function(data) {
+		$('#title').append(data);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
 
+var descReq = $.ajax({
+		url: 'decs.php',
+		dataType: 'text',
+		type: 'GET',
+	})
+	.done(function(data) {
+		$('#desc').append(data);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+	$.when(titleReq,descReq).done(function(titleData,descData) {
+			$('#title').append(titleData[0]);
+			$('#desc').append(descData[0]);
+	}).fail(function() {
+		$('title').html('Error');
+	});
+		
+	
+});
 
 </script>
 
