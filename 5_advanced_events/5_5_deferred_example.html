@@ -18,32 +18,7 @@
 
 <script>
 
-$(document).ready(function(){
-   /*$.ajax({
-	   url: 'title.php',
-	   success: function(data){
-		   $('#title').append(data);
-	   }
-	});
-	$.ajax({
-	   url: 'desccc.php',
-	   success: function(data){
-		   $('#desc').append(data);
-	   }
-	});*/
-	var titleReq = $.ajax({
-	   url: 'titleee.php'
-	});
-	var descReq = $.ajax({
-	   url: 'desc.php'
-	});
-	$.when(titleReq,descReq).done(function(titleData,descData){
-		$('#title').append(titleData[0]);
-		$('#desc').append(descData[0]);
-	}).fail(function(){
-		$('#title').html('wystapił błąd');
-	});
-});
+
 
 </script>
 
