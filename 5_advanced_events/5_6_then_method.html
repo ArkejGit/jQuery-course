@@ -15,15 +15,6 @@
 
 <script>
 
-$(document).ready(function(){
-  var req = $.get('numbers.php');
-  var filtered = req.then(function(value){
-	  return value * 10;
-	});
-	filtered.done(function(data){
-		alert(data);
-	});
-});
 
 </script>
 
