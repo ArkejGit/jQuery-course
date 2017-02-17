@@ -21,6 +21,21 @@
 </div>
 
 <script>
+
+$('#run').on('click', function() {
+	$.cookie('newCookie','test', {
+		expires: 14
+	});
+});
+
+$('#read').on('click', function() {
+	var output = $.cookie('newCookie');
+	$('#art1').html(output);
+});
+
+$('#del').on('click', function() {
+	$.removeCookie('newCookie');
+});
 		
 </script>
 
