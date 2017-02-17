@@ -19,6 +19,19 @@
 </div>
 
 <script>
+
+var j = $.noConflict();
+
+j(document).ready(function() {
+	j('#art2').addClass('text-error'); //jQuery
+});
+
+function changeClass() {
+	var art1 = $('art1'); //prototype
+	art1.addClassName('alert alert-info');
+}
+
+changeClass();
 		
 </script>
 
