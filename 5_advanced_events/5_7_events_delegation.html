@@ -18,7 +18,7 @@
         
         <hr>
         
-        <p id="p1"><button id="btn1" class="btn btn-primary">Następny</button></p>
+        <p id="p1"><button id="btn1" class="btn btn-primary">Next</button></p>
         <p id="p2"></p>
         
     </div>
@@ -26,6 +26,45 @@
 </div>   
 
 <script>
+
+// $('img').on('click', function() {
+// 	imgAlert();
+// });
+
+// $('button').on('click', function() {
+// 	btnAlert();
+// });
+
+function imgAlert(){
+	alert('IMG');
+}
+
+function btnAlert(){
+	alert('BUTTON');
+}
+
+$('#content').on('click', 'img, button', function(e) {
+		e.preventDefault();
+		var t = e.target;
+
+		switch(t.tagName.toLowerCase()){
+			case 'img':
+				imgAlert();
+			break;
+			case 'button':
+				btnAlert();
+			break;
+			default:
+		}
+});
+
+var newBtn =$('<button>', {
+	id: 'btn2',
+	'class': 'btn btn-primary',
+	text: 'Previous'
+});
+
+$('#p2').append(newBtn);
 
 
 </script>
