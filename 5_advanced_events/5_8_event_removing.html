@@ -22,6 +22,22 @@
 
 <script>
 
+$(document).ready(function() {
+	
+	$('#add').on('click', function() {
+		$('#cover').on('click', function() {
+				alert('IMG');
+		});
+		$('#info').html('Event added');
+	});
+
+	$('#remove').on('click', function() {
+		$('#cover').off('click');
+		$('#info').html('Event removed');
+	});
+
+});
+
 </script>
 
 </body>
