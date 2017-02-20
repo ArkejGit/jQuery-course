@@ -1,4 +1,3 @@
-$.fn.textColor = function(){
-	this.css("color","blue");
+$.fn.textColor = function() {
+	this.css('color', 'blue');
 };
-
